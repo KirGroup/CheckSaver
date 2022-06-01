@@ -42,13 +42,6 @@ public class SampleActivity extends AppCompatActivity {
         //initialize preferences and set start latest saved date for check
         pref = getSharedPreferences("Storage", MODE_PRIVATE);
 
-
-//        checkValue.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showChangeCheckDialog();
-//            }
-//        });
         checkValue = findViewById(R.id.tv_check);
         checkValue.setText(pref.getString(saveCheckKey, "enter the data"));
 
@@ -117,20 +110,4 @@ public class SampleActivity extends AppCompatActivity {
         calendar = Calendar.getInstance();
         new DatePickerDialog(SampleActivity.this, dateSetListener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
-
-//    private  void showChangeCheckDialog(){
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        ConstraintLayout customLayout = (ConstraintLayout) getLayoutInflater().inflate(R.layout.change_check, null);
-//
-//        builder.setView(customLayout);
-//
-//        builder.setPositiveButton("OK", (dialogInterface, i) -> {
-//
-//                });
-//
-//        builder.setNegativeButton("Cancel", (dialogInterface, i) -> {
-//                    //only close
-//                });
-//        builder.show();
-//    }
 }
